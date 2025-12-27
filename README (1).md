@@ -9,12 +9,17 @@ To write a Python program to convert the number **16** into its **binary represe
 3. Print the result.
 
 ## 🧾 Program
+```
+a=16
+b=bin(a)
+print(b)
+```
 
-Add Code Here
 
 ## Output
-
+![alt text](<Screenshot 2025-12-27 094739.png>)
 ## Result
+The program is executed successfully.
 # Functions in Python: Modulo Calculator
 
 ## 🎯 Aim
@@ -28,12 +33,19 @@ To write a Python program that defines a function which accepts two values and r
 5. Call the `result` function with the user-provided values.
 
 ## 🧾 Program
-
-Add code Here
+```
+def result(a,b):
+    print(a%b)
+a=int(input("Enter the first number: "))
+b=int(input("Enter the second number: "))
+result(a,b)
+```
 
 ## Output
-
+![alt text](<Screenshot 2025-12-27 094917.png>)
 ## Result
+The program is executed successfully.
+
 # Lambda Function in Python: Addition of Two Numbers
 
 ## 🎯 Aim
@@ -45,11 +57,18 @@ To write a Python program that defines a **lambda function** which takes two arg
 3. Call the function with the user inputs and print the result.
 
 ## 🧾 Program
-Add code here
+```
+a=int(input("Enter the first number: "))
+b=int(input("Enter the second number: "))
+f = lambda a , b : a + b
+print("The sum is : ",f(a,b))
+```
 
 ## Output
-
+![alt text](<Screenshot 2025-12-27 095023.png>)
 ## Result
+The program is executed successfully.
+
 # 🔺 Looping(Patterns)-Pascal's Triangle Generator in Python
 
 This project demonstrates a simple Python program to generate **Pascal’s Triangle**, where the number of rows is provided by the user.
@@ -79,11 +98,23 @@ To write a Python program that generates **Pascal's Triangle** using numbers. Th
 ---
 
 ## 🧪 Program
-Add Code Here
+```
+from math import factorial
 
-## Sample Output
+n = int(input("Enter the number of rows: "))
 
+for i in range(n):
+    print(' ' * (n - i - 1), end='')
+    for j in range(i + 1):
+        print(factorial(i) // (factorial(j) * factorial(i - j)), end=' ')
+    print()
+```
+
+## Output
+![alt text](<Screenshot 2025-12-27 095113.png>)
 ## Result
+The program is executed successfully.
+
 
 ## Loops in Python: Palindrome Number Checker
 
@@ -103,7 +134,21 @@ To write a Python program that checks whether a given number is a **palindrome**
    - Else, print that it is not a palindrome.
 
 ## 🧾 Program
-Add code Here
-## Output
+```
+n = int(input("Enter a number: "))
+temp = n
+rev = 0
 
+while temp > 0:
+    rev = (10 * rev) + temp % 10
+    temp = temp // 10
+
+if rev == n:
+    print(n, "is a palindrome")
+else:
+    print(n, "is not a palindrome")
+```
+## Output
+![alt text](<Screenshot 2025-12-27 095157.png>)
 ## Result
+The program is executed successfully.
